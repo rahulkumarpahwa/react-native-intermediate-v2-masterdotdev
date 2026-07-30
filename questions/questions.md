@@ -46,3 +46,18 @@ npm run lint -- --fix
 
 15. How can you control the visibility of tab bar labels in Expo Router?
 15. Tab bar labels can be controlled using the tabBarShowLabel option set to false. Additionally, a tabBarLabel function can be used to conditionally render labels and customize their appearance based on tab focus.
+
+16. What is the purpose of setting up Path Alias in TypeScript configuration?
+16. Path Alias simplifies import paths by allowing you to create shorthand references to project directories, making imports more concise and easier to manage when refactoring files.
+
+17. What are layout groups in Expo Router, and how are they defined?
+17. Layout groups are folders surrounded by parentheses that do not affect the route path. They allow for organizing routes and can be used to create nested navigation structures without impacting the actual route names.
+
+18. How can you render a full-screen modal over bottom tabs in Expo Router?
+18. By using layout groups and creating a top-level layout file that uses a stack navigator, which can render both tabs and modal screens, allowing modals to appear on top of the existing tab navigation.
+
+19. What is the significance of the (tabs) folder in route configuration?
+19. The (tabs) folder is a layout group that groups tab-related routes without including 'tabs' in the actual route path, enabling more flexible navigation and layout management.
+
+20. How can you implement a conditional rendering mechanism for routes in Expo Router?
+20. By using a layout file that checks a condition (like onboarding completion) and uses the Redirect component from expo-router to dynamically redirect users to different routes based on that condition.
