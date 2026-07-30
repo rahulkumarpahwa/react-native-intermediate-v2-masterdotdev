@@ -121,3 +121,18 @@ npm run lint -- --fix
 
 40. What library is used to implement linear gradients in this example?
 40. Expo linear gradient library, which can be installed using the command 'npx expo install expo-linear-gradient'
+
+41. What are two alternative image libraries recommended for production React Native applications?
+41. Expo image and Fast image, which offer additional caching and support for additional image types
+
+42. Why is the require() method used when adding local images in React Native?
+42. When the app is bundled, only the files that are required will be included in the bundle
+
+43. How can you calculate an image size relative to the screen using React Native?
+43. Use the useWindowDimensions hook to get the screen width, and then divide or scale it as needed (e.g., width divided by 1.5)
+
+44. What method can be used to limit an image's maximum size across different screen sizes?
+44. Use Math.min() to set a maximum size (like 400 pixels) while still allowing the image to scale relative to screen size
+
+45. How can you ensure elements are spaced evenly on a screen in React Native?
+45. Use justifyContent: 'space-evenly' in the container's style to add equal amounts of space between elements

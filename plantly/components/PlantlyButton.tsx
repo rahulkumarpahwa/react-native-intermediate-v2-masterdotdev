@@ -34,7 +34,7 @@ export function PlantlyButton({ title, onPress }: Props) {
 const styles = StyleSheet.create({
   text: {
     color: "white",
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "bold",
   },
   button: {
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 6,
     backgroundColor: theme.colorGreen,
+    margin : 12,
   },
   buttonPressed: {
     backgroundColor: theme.colorLeafyGreen,
