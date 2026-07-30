@@ -106,3 +106,18 @@ npm run lint -- --fix
 
 35. Why might a developer name a button component with a project-specific prefix?
 35. To make importing easier and avoid naming conflicts with other button components in the project
+
+36. What is a linear gradient?
+36. A linear gradient is an image consisting of a transition between two or more colors, creating a smooth color blending effect
+
+37. How do you specify colors in a linear gradient?
+37. Colors are specified in an array, and you can define start and end values using x0, y0, x1, y1 coordinates to control the gradient direction
+
+38. What method can be used to customize the status bar appearance in a React Native screen?
+38. Use the Expo Status Bar component with properties like 'style' set to 'light' or 'dark' to change the status bar content appearance
+
+39. What parameters can be adjusted in a linear gradient to change its appearance?
+39. The colors array, start and end coordinates (x0, y0, x1, y1), which control the gradient's direction and color transition
+
+40. What library is used to implement linear gradients in this example?
+40. Expo linear gradient library, which can be installed using the command 'npx expo install expo-linear-gradient'
