@@ -32,3 +32,17 @@ npm run lint -- --fix
 10. What is a requirement for using Expo Router in a project?
 10. When using Expo Router, a mandatory requirement is creating an 'app' folder as the root of the application, with an index file serving as the main screen.
 
+11. How are screens added in Expo Router without explicitly configuring them in the layout file?
+11. Screens exist as soon as they are added to the file system. Each file in the app folder automatically becomes a screen, and the layout file determines how these screens are rendered.
+
+12. What library is used for adding vector icons in the mobile application?
+12. Expo vector icons, which is built on top of React Native vector icons, is used for quickly adding vector icons to the app.
+
+13. How can you customize tab bar icons in Expo Router?
+13. Tab bar icons can be customized using the tabBarIcon property, which is a function that can render custom icons. The function receives size and color parameters that can be used to style the icon dynamically.
+
+14. What is the purpose of creating a theme file in a React Native application?
+14. A theme file helps maintain consistency across the application by centralizing constant values like colors, spacings, and font families. It makes it easier to change global styles and prevents inconsistent styling throughout the app.
+
+15. How can you control the visibility of tab bar labels in Expo Router?
+15. Tab bar labels can be controlled using the tabBarShowLabel option set to false. Additionally, a tabBarLabel function can be used to conditionally render labels and customize their appearance based on tab focus.
