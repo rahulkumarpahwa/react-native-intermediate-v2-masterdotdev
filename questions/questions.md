@@ -76,3 +76,18 @@ npm run lint -- --fix
 
 25. What navigation animation options were demonstrated?
 25. Fade animation, which can be applied to screen transitions to create a smoother user experience
+
+26. What is the purpose of using AsyncStorage in a React Native application?
+26. To persist state across app launches, allowing data to be saved on the device storage and maintained between app restarts
+
+27. What are the imports needed from Zustand middleware to implement state persistence?
+27. Import persist and createJSONStorage from 'zustand/middleware'. Also import AsyncStorage to use as the storage adapter.
+
+28. What are the two main arguments passed to the persist function in Zustand?
+28. The store configuration and a config object describing how to persist the state, which includes a key and storage method
+
+29. How do you specify the storage method when using persist in Zustand?
+29. Use createJSONStorage(AsyncStorage) to define the storage mechanism for persisting state
+
+30. What is an example of a key name when persisting state with AsyncStorage?
+30. A unique identifier like 'plantly-user-store' that will be used to store and retrieve the state in AsyncStorage
