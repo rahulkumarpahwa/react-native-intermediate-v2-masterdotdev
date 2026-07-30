@@ -91,3 +91,18 @@ npm run lint -- --fix
 
 30. What is an example of a key name when persisting state with AsyncStorage?
 30. A unique identifier like 'plantly-user-store' that will be used to store and retrieve the state in AsyncStorage
+
+31. What is the recommended alternative to TouchableOpacity in React Native?
+31. Pressable component
+
+32. How can you add haptic feedback to a button press in React Native?
+32. Use expo-haptics library with haptics.impactAsync(haptics.ImpactFeedbackStyle.Light), ensuring it only runs on mobile platforms
+
+33. What unique styling feature does Pressable offer compared to other touchable components?
+33. Pressable allows passing a function to styles that can access the current button state, enabling dynamic styling based on press state
+
+34. How can you create a press effect that changes button color when pressed?
+34. Use a dynamic style function in Pressable that returns an array of styles, with the pressed style overriding the default style
+
+35. Why might a developer name a button component with a project-specific prefix?
+35. To make importing easier and avoid naming conflicts with other button components in the project

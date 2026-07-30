@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, TouchableOpacity, Button } from "react-native";
 import { theme } from "@/theme";
 import { useUserStore } from "@/store/userStore";
 import { useRouter } from "expo-router";
+import { PlantlyButton } from "@/components/PlantlyButton";
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -14,8 +15,11 @@ export default function OnboardingScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Onboarding</Text>
-      <Button title="Let me in!" onPress={handleButtonPress}></Button>
+      <Text style={styles.text}>Welcome onboard!</Text>
+      <PlantlyButton
+        title="Let me in!"
+        onPress={handleButtonPress}
+      ></PlantlyButton>
     </View>
   );
 }
@@ -28,6 +32,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colorWhite,
   },
   text: {
-    fontSize: 24,
+    fontSize: 64,
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
