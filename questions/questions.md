@@ -136,3 +136,18 @@ npm run lint -- --fix
 
 45. How can you ensure elements are spaced evenly on a screen in React Native?
 45. Use justifyContent: 'space-evenly' in the container's style to add equal amounts of space between elements
+
+46. What is the recommended approach for rendering a modal that needs to overlay content like bottom tabs?
+46. The modal should be defined at the same level or above the content you want to overlay, typically at the root or app level
+
+47. What React Native component prop can help expand the clickable area of a button beyond its visual boundaries?
+47. The hitSlop prop, which adds additional pressable area around a component that can trigger the onPress event
+
+48. When using a component as a child of a Link in a React Native router, what prop must be added to make it work correctly?
+48. The asChild prop must be added when rendering a component (like a Pressable) as a child of a Link
+
+49. What is the purpose of setting a modal's presentation mode in a mobile app navigation configuration?
+49. To define how the modal will be displayed, such as full-screen on iOS or sliding in from the right on Android
+
+50. Why is it important to ensure a pressable area is larger than its visual icon?
+50. To improve user experience by making it easier for users to tap the button, even if they don't tap exactly on the icon
