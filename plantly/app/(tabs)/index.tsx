@@ -1,12 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { theme } from "@/theme";
+import { useRouter } from "expo-router";
+import { useUserStore } from "@/store/userStore";
 
 export default function Page() {
+  const router = useRouter();
+  const toggleHadOnboarded = useUserStore((state) => state.toggleHadOnboarded);
+
+  const handleButtonPress = () => {
+    toggleHadOnboarded();
+  };
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <Button title="Back to onboarding" onPress={handleButtonPress} />
       </View>
     </View>
   );

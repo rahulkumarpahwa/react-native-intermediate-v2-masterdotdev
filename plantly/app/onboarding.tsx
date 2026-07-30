@@ -1,10 +1,21 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, Button } from "react-native";
 import { theme } from "@/theme";
+import { useUserStore } from "@/store/userStore";
+import { useRouter } from "expo-router";
 
 export default function OnboardingScreen() {
+  const router = useRouter();
+  const toggleHadOnboarded = useUserStore((state) => state.toggleHadOnboarded);
+
+  const handleButtonPress = () => {
+    toggleHadOnboarded();
+    router.replace("/"); // we don't use the navigate here because we don't want the user to go back to the login / onboarding page after it has login. This will replace top stack screen with index in the /(tabs)
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Onboarding</Text>
+      <Button title="Let me in!" onPress={handleButtonPress}></Button>
     </View>
   );
 }

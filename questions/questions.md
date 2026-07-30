@@ -61,3 +61,18 @@ npm run lint -- --fix
 
 20. How can you implement a conditional rendering mechanism for routes in Expo Router?
 20. By using a layout file that checks a condition (like onboarding completion) and uses the Redirect component from expo-router to dynamically redirect users to different routes based on that condition.
+
+21. What are three popular state management libraries mentioned in the discussion?
+21. Redux (with Redux Toolkit), Zustand, and Jotai
+
+22. What is the purpose of using a state management library in a React Native application?
+22. To persist data across app launches, handle async storage, and manage state in a more optimized way without manually handling storage and synchronization
+
+23. What are the key components of a Zustand store as demonstrated in the example?
+23. An initial state (like hasFinishedOnboarding), and a function to update the state (like toggleHasOnboarded)
+
+24. What navigation methods were discussed for screen transitions?
+24. back, navigate, push, and replace. The instructor specifically recommended 'replace' to prevent users from swiping back to the onboarding screen
+
+25. What navigation animation options were demonstrated?
+25. Fade animation, which can be applied to screen transitions to create a smoother user experience
