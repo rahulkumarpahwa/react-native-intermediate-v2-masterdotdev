@@ -181,3 +181,18 @@ npm run lint -- --fix
 
 60. What approach is used for generating unique plant IDs in the application?
 60. A state-managed incremental ID system is used, where each new plant increments a 'next ID' value, ensuring uniqueness within the application
+
+61. What library is used to access system UIs for selecting images and videos from a phone's library?
+61. Expo ImagePicker library
+
+62. What hook is needed to request camera permissions before accessing the user's camera?
+62. useCameraPermissions hook
+
+63. What method is used to launch the image library in the ImagePicker?
+63. ImagePicker.launchImageLibraryAsync()
+
+64. What options can be set when launching the image library with ImagePicker?
+64. mediaTypes (images/videos/all), allowsEditing (crop image), aspect ratio, and image quality
+
+65. What is important to note about the URI of a selected image from ImagePicker?
+65. It is a temporary cached file that can be used while the app is running
