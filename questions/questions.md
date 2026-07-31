@@ -166,3 +166,18 @@ npm run lint -- --fix
 
 55. What simple validation technique was demonstrated in the code example?
 55. Using an alert to prevent submission if input fields are empty
+
+56. What are the key properties of a PlantType in the application?
+56. A PlantType includes a unique id, name, wateringFrequency in days (number), and an optional lastWateredAtTimestamp (number)
+
+57. What method is used to render a list of items efficiently in React Native?
+57. FlatList is used to render lists efficiently, as it only renders items within the viewable area and provides optimization for large datasets
+
+58. How do shadow styles differ between iOS and Android?
+58. On iOS, shadow props are used directly, while on Android, the elevation prop is used to create similar shadow effects
+
+59. What zustand store methods are implemented for plant management?
+59. The plant store includes methods to add a plant, remove a plant by plantId, and water a plant by setting its lastWateredAtTimestamp
+
+60. What approach is used for generating unique plant IDs in the application?
+60. A state-managed incremental ID system is used, where each new plant increments a 'next ID' value, ensuring uniqueness within the application
