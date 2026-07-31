@@ -36,13 +36,14 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 22,
     fontWeight: "bold",
+    textAlign : "center"
   },
   button: {
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 6,
     backgroundColor: theme.colorGreen,
-    margin : 12,
+    margin : 4,
   },
   buttonPressed: {
     backgroundColor: theme.colorLeafyGreen,

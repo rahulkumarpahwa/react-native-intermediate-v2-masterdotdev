@@ -2,7 +2,11 @@ import { Stack } from "expo-router";
 
 export default function Layout() {
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerLargeTitle: false,
+      }}
+    >
       <Stack.Screen
         name="(tabs)"
         options={{ headerShown: false, animation: "flip" }}
@@ -19,9 +23,10 @@ export default function Layout() {
         name="new"
         options={{
           presentation: "modal",
-          headerShown: false,
+          headerShown: true,
           title: "New Plant",
-          animation: "slide_from_bottom",
+          // animation: "slide_from_bottom",
+          headerTitleAlign: "center",
         }}
       />
     </Stack>

@@ -151,3 +151,18 @@ npm run lint -- --fix
 
 50. Why is it important to ensure a pressable area is larger than its visual icon?
 50. To improve user experience by making it easier for users to tap the button, even if they don't tap exactly on the icon
+
+51. What React Native component is used to ensure inputs are always visible when the keyboard is open?
+51. Keyboard Aware Scroll View
+
+52. How are form inputs handled in React Native when there is no native form element?
+52. Inputs are handled independently using state values, often managed with useState hooks
+
+53. What keyboard type property can be used to display a numeric keyboard in a text input?
+53. keyboardType='numeric' or keyboardType='number-pad'
+
+54. What scroll view property prevents the keyboard from hiding when tapping other elements?
+54. keyboardShouldPersistTaps='handled'
+
+55. What simple validation technique was demonstrated in the code example?
+55. Using an alert to prevent submission if input fields are empty
