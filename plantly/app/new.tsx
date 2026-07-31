@@ -45,7 +45,7 @@ export default function NewScreen() {
     }
 
     console.log("Adding plant", name, days);
-    addPlant(name, parseInt(days, 10));
+    addPlant(name, parseInt(days, 10), String(imageUri));
     setTimeout(() => router.navigate("/"), 100);
     Toast.show({
       type: "success",

@@ -196,3 +196,18 @@ npm run lint -- --fix
 
 65. What is important to note about the URI of a selected image from ImagePicker?
 65. It is a temporary cached file that can be used while the app is running
+
+66. What library is used to handle file operations in the mobile app?
+66. expo-file-system
+
+67. Why is it necessary to copy an image file to device storage instead of using its original URI?
+67. The original URI might not be permanent, so copying ensures the file remains available until the app is deleted
+
+68. How is the saved image filename created to ensure uniqueness?
+68. By combining a timestamp (using new Date.getTime()) with the last part of the image URI's file path
+
+69. What directory is used to save the copied image files?
+69. FileSystem.documentDirectory
+
+70. What method from expo-file-system is used to copy files?
+70. FileSystem.copyAsync()
