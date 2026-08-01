@@ -256,3 +256,18 @@ npm run lint -- --fix
 
 85. What command is used to run an iOS app in a simulator?
 85. npx expo run ios
+
+86. What does EAS stand for?
+86. Expo Application Services, a cloud service specifically for building React Native apps
+
+87. What are the three main types of builds configured in the eas.json file?
+87. Development build, preview build, and production build
+
+88. What is the key difference between development and preview builds?
+88. The development build has development client set to true, enabling the dev menu, while the preview build has development client set to false, bundling a single JavaScript bundle to emulate production
+
+89. What is required for iOS builds using EAS?
+89. An Apple developer account, which is a subscription service that costs approximately $99 per year
+
+90. What is Expo Orbit and what does it do?
+90. A free tool that allows users to install APK and IPA files on simulators, emulators, or physical devices
