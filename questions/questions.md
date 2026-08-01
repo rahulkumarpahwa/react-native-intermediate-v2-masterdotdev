@@ -271,3 +271,20 @@ npm run lint -- --fix
 
 90. What is Expo Orbit and what does it do?
 90. A free tool that allows users to install APK and IPA files on simulators, emulators, or physical devices
+
+NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image on Android like the one in this example, because Expo automatically resizes them. If you run npx expo prebuild --platform android --clean and check android/app/src/main/res/drawable-hdpi/splashscreen_logo.png, you'll see the resizing in action. A better approach is to use a transparent icon (like plantly.png) and set a backgroundColor instead.
+
+91. What is a splash screen in a mobile app?
+91. A splash screen is a full-screen PNG image displayed when an app first launches, while the app content is still loading natively.
+
+92. What are the key requirements for creating an iOS app icon?
+92. An iOS app icon should be a 1024x1024 PNG square with no transparency and no squared corners.
+
+93. What is the difference between an Android app icon and an iOS app icon?
+93. An Android app icon is a 1024x1024 PNG that can have transparency or a solid background, and is designed to look good on various launcher home screens.
+
+94. What command is used to regenerate native projects when making changes to assets?
+94. The command npx expo prebuild --clean is used to regenerate native projects, especially when assets or configuration have been changed.
+
+95. How can you prevent the splash screen from automatically hiding when an app launches?
+95. Use SplashScreen.preventAutoHide() to manually control when the splash screen disappears, which allows for performing async operations like authentication checks before showing the main app content.
