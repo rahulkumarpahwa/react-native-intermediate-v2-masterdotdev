@@ -1,10 +1,9 @@
-import { Link, Redirect, Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from "@/theme";
-import { Pressable, Text } from "react-native";
+import { Text } from "react-native";
 import { useUserStore } from "@/store/userStore";
-import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function Layout() {
   const hasFinishedOnboarding = useUserStore(
@@ -18,10 +17,9 @@ export default function Layout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: theme.colorGreen }}>
       <Tabs.Screen
-        name="index"
+        name="(home)"
         options={{
-          title: "Home",
-          headerTitleAlign: "center",
+          headerShown: false,
           // tabBarShowLabel: false,
           tabBarLabel({ focused, color }) {
             return focused ? (
@@ -32,20 +30,6 @@ export default function Layout() {
           },
           tabBarIcon: ({ size, color }) => {
             return <Entypo name="leaf" size={size} color={color} />;
-          },
-          headerRight: () => {
-            return (
-              <Link href="/new" asChild>
-                {/* asChild so that the Link work as the child Pressable otherwiwse it will not work. asChild tells Link to use its child (Pressable) as the actual clickable element instead of rendering its own wrapper. */}
-                <Pressable hitSlop={20} style={{ marginRight: 18 }}>
-                  <AntDesign
-                    name="plus-circle"
-                    size={24}
-                    color={theme.colorGreen}
-                  />
-                </Pressable>
-              </Link>
-            );
           },
         }}
       />

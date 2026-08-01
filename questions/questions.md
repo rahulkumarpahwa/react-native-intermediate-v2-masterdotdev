@@ -211,3 +211,18 @@ npm run lint -- --fix
 
 70. What method from expo-file-system is used to copy files?
 70. FileSystem.copyAsync()
+
+71. How do you create a dynamic route in Expo Router?
+71. Create a folder with square brackets, such as [plantId], and use the folder name as the dynamic parameter in the route. You can then access the parameter using useLocalSearchParams() hook.
+
+72. How can you dynamically set the screen title in a navigation stack?
+72. Use the useEffect hook with navigation.setOptions() to set the title dynamically. You can retrieve the dynamic parameter using useLocalSearchParams() and then set the title based on that parameter.
+
+73. What is the purpose of converting an index route into a stack route?
+73. Converting an index route into a stack route allows you to add additional nested screens with a shared layout and header. This enables more complex navigation structures within a single section of the application.
+
+74. How do you hide a header in Expo Router?
+74. Use the 'headerShown: false' option in the layout file or screen options. When converting routes to stacks, you can selectively hide parent or child headers to control the navigation appearance.
+
+75. What is the recommended library for date formatting in JavaScript?
+75. The instructor recommends using date-fns, a utility library that provides functions for formatting dates, calculating time distances, and handling various date-related operations easily.

@@ -9,6 +9,7 @@ export default function App() {
   const router = useRouter();
   const plants = usePlantStore((state) => state.plants);
 
+  // root path as index.tsx is the main entry route : plantly\app\(tabs)\(home)\index.tsx
   return (
     <FlatList
       style={styles.container}
