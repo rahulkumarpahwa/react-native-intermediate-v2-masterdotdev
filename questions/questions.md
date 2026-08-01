@@ -241,3 +241,18 @@ npm run lint -- --fix
 
 80. Why might developers want to migrate away from Expo Go?
 80. To use libraries with native configuration, use different library versions, support specific native features like In-App Purchases, VisionCamera, analytics, or Firebase, and avoid SDK version limitations
+
+81. What command is used to install the expo-dev-client package?
+81. npx expo install expo-dev-client
+
+82. What command generates native projects for iOS and Android in an Expo project?
+82. npx expo prebuild
+
+83. What is the recommended format for a bundle identifier?
+83. Reverse URL format, such as com.example.myapp
+
+84. What is the term Expo uses for generating native projects from inputs?
+84. Continuous native generation
+
+85. What command is used to run an iOS app in a simulator?
+85. npx expo run ios
