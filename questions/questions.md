@@ -226,3 +226,18 @@ npm run lint -- --fix
 
 75. What is the recommended library for date formatting in JavaScript?
 75. The instructor recommends using date-fns, a utility library that provides functions for formatting dates, calculating time distances, and handling various date-related operations easily.
+
+76. What are the two main parts of a React Native app?
+76. A JavaScript bundle and a native app bundle
+
+77. What are the key limitations of using Expo Go?
+77. Cannot use libraries requiring native configuration, limited to pre-bundled libraries, restricted to the latest published Expo SDK version, and has iOS version restrictions
+
+78. What is a development build in the context of React Native?
+78. A customizable version of Expo Go with only the native libraries needed for a specific project, allowing more flexibility than the standard Expo Go
+
+79. What happens on iOS when a new Expo SDK version is published?
+79. Expo Go is updated in the App Store, and it will only load projects using the latest SDK version, requiring immediate app upgrades for continued development
+
+80. Why might developers want to migrate away from Expo Go?
+80. To use libraries with native configuration, use different library versions, support specific native features like In-App Purchases, VisionCamera, analytics, or Firebase, and avoid SDK version limitations
