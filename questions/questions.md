@@ -360,3 +360,18 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 119. What is the recommended approach for more secure and integrated deep linking?
 119. Use universal and app links, which integrate deep linking with a website by registering a domain as an associated domain in the app and adding specific files to the website to enable more sophisticated linking.
+
+120. What is build signing and what is its primary goal?
+120. Build signing is a security mechanism designed to protect users from potentially malicious applications by ensuring apps are authenticated before installation on physical devices.
+
+121. How does Android handle build signing?
+121. Android uses an Android keystore, which is a cryptographic container for keys. There are different types of keystores like debug and upload keystores, but they function similarly. Currently, Google offers Managed Build Signing where production keys are managed by Google.
+
+122. What are the three types of builds for iOS?
+122. The three types of iOS builds are: development build, ad hoc build, and production build. Each build type requires different provisioning profiles and certificates.
+
+123. What is an app ID in iOS development?
+123. An app ID is a unique identifier for an app, typically using a reverse domain name format. All provisioning profiles are tied to a specific app ID and cannot be used with a different app ID.
+
+124. What restrictions exist for development builds on iOS?
+124. Development builds can only be done via Xcode and have limited capabilities. For example, they cannot use push notifications and are restricted to a personal team with limited functionality.

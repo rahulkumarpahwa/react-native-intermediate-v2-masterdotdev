@@ -28,12 +28,12 @@ export default function PlantDetails() {
       }
     }
 
-    // get the initial url print when someone go to app's screen using the url
-    const getInitial = async ()=>{
-        const url = await Linking.getInitialURL();
-        console.log(url)
-    }
-    getInitial()
+    // // get the initial url print when someone go to app's screen using the url
+    // const getInitial = async ()=>{
+    //     const url = await Linking.getInitialURL();
+    //     console.log(url)
+    // }
+    // getInitial()
   }, []);
 
   useEffect(() => {

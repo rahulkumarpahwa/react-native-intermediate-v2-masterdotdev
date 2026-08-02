@@ -79,6 +79,7 @@
         box-shadow: none;
         font-size: 15px;
         padding: 10px 22px;
+        margin-bottom: 0;
       }
       .btn-secondary:hover {
         background: #e8f5e9;
@@ -129,6 +130,77 @@
         border-radius: 4px;
         font-size: 13px;
       }
+
+      /* Plant ID picker */
+      .picker {
+        margin: 8px 0 28px;
+        padding: 20px 16px;
+        background: #f6fbf6;
+        border: 1px solid #c8e6c9;
+        border-radius: 14px;
+      }
+      .picker h2 {
+        font-size: 17px;
+        color: #1b5e20;
+        margin-bottom: 6px;
+      }
+      .picker p {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 14px;
+        line-height: 1.4;
+      }
+      .input-row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .input-row input {
+        width: 90px;
+        padding: 10px 12px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #1b5e20;
+        border: 2px solid #2e7d32;
+        border-radius: 10px;
+        outline: none;
+        background: #ffffff;
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+      .input-row input::-webkit-outer-spin-button,
+      .input-row input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .input-row input:focus {
+        box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.25);
+      }
+      .range-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        font-size: 12px;
+        color: #999;
+      }
+      .generated-link {
+        margin-top: 12px;
+        font-size: 13px;
+        color: #555;
+        text-align: center;
+        word-break: break-all;
+      }
+      .generated-link code {
+        background: #e8f5e9;
+        color: #1b5e20;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        user-select: all;
+      }
     </style>
   </head>
   <body>
@@ -141,12 +213,41 @@
       </p>
 
       <a class="btn" href="plantly://">Click me to home route </a>
-      <a class="btn" href="plantly://plants/1">Click me to go to plant 1</a>
+      <a class="btn" id="plantLink" href="plantly://plants/1"
+        >Click me to go to plant 1</a
+      >
 
-      <div>
-        <a class="btn btn-secondary" href="plantly://plants/1?action=water">
-          Water plant #1
-        </a>
+
+      <div class="picker">
+        <h2>💧 Water any plant</h2>
+        <p>
+          Pick a plant ID between 1 and 100, then tap the button to water that
+          plant via deep link.
+        </p>
+        <div class="input-row">
+          <input
+            type="number"
+            id="plantId"
+            min="1"
+            max="100"
+            value="1"
+            aria-label="Plant ID between 1 and 100"
+          />
+          <a
+            class="btn btn-secondary"
+            id="waterLink"
+            href="plantly://plants/1?action=water"
+          >
+            Water plant #1
+          </a>
+        </div>
+        <div class="range-labels">
+          <span>Min: 1</span>
+          <span>Max: 100</span>
+        </div>
+        <p class="generated-link">
+          Link: <code id="generatedLink">plantly://plants/1?action=water</code>
+        </p>
       </div>
 
       <p
@@ -180,8 +281,51 @@
             <code>plantly</code> scheme (it is set in <code>app.json</code>) and
             that the build includes native project files.
           </li>
+          <li>
+            To test watering a specific plant via the command line, run:
+            <code
+              >npx uri-scheme open
+              "plantly://plants/1?action=water" --android</code
+            >
+          </li>
         </ul>
       </div>
     </div>
+
+    <script>
+      const plantIdInput = document.getElementById("plantId");
+      const plantLink = document.getElementById("plantLink");
+      const waterLink = document.getElementById("waterLink");
+      const generatedLink = document.getElementById("generatedLink");
+
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
+
+      function updateLink() {
+        let id = parseInt(plantIdInput.value, 10);
+        if (isNaN(id)) {
+          id = 1;
+        }
+        id = clamp(id, 1, 100);
+        plantIdInput.value = id;
+
+        // "Click me to go to plant N" link (no water action)
+        const plantHref = "plantly://plants/" + id;
+        plantLink.href = plantHref;
+        plantLink.textContent = "Click me to go to plant " + id;
+
+        // Water link
+        const waterHref = "plantly://plants/" + id + "?action=water";
+        waterLink.href = waterHref;
+        waterLink.textContent = "Water plant #" + id;
+        generatedLink.textContent = waterHref;
+      }
+
+      plantIdInput.addEventListener("input", updateLink);
+      plantIdInput.addEventListener("change", updateLink);
+      updateLink();
+    </script>
   </body>
 </html>
+
