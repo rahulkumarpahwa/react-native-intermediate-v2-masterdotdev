@@ -375,3 +375,18 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 124. What restrictions exist for development builds on iOS?
 124. Development builds can only be done via Xcode and have limited capabilities. For example, they cannot use push notifications and are restricted to a personal team with limited functionality.
+
+125. What are the two types of developer accounts available for mobile app publishing?
+125. Individual developer account and business account
+
+126. How much does a Google Developer account cost, and what does it provide?
+126. A Google Developer account costs $25 and provides lifetime access
+
+127. What is the difference between an APK and an AAB file in Android app distribution?
+127. An APK is directly installable on a device, while an AAB is an optimized bundle that Google uses to generate device-specific APKs
+
+128. How much does an Apple Developer Program account cost, and what is its billing cycle?
+128. An Apple Developer Program account costs $99 annually and is a subscription-based service
+
+129. What are three ways to deploy an app to the App Store?
+129. Deploy via Xcode, use the Apple Transporter app, or use EAS Submit
