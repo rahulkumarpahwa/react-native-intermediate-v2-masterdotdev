@@ -1,5 +1,5 @@
 import { useLocalSearchParams, useNavigation, useRouter } from "expo-router";
-import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
+import { View, Text, StyleSheet, Pressable, Alert, Linking } from "react-native";
 import { usePlantStore } from "@/store/plantStore";
 import { differenceInCalendarDays, format } from "date-fns";
 import { PlantlyButton } from "@/components/PlantlyButton";
@@ -19,6 +19,22 @@ export default function PlantDetails() {
     state.plants.find((plant) => String(plant.id) === plantId),
   );
   const navigation = useNavigation();
+
+  useEffect(() => {
+    // url we get when call the app's page with deep link and pass the query params in that
+    if (params.action === "water") {
+      if (typeof plantId === "string") {
+        waterPlant(plantId);
+      }
+    }
+
+    // get the initial url print when someone go to app's screen using the url
+    const getInitial = async ()=>{
+        const url = await Linking.getInitialURL();
+        console.log(url)
+    }
+    getInitial()
+  }, []);
 
   useEffect(() => {
     navigation.setOptions({

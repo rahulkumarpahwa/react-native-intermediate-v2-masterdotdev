@@ -333,3 +333,15 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 110. What hook is used to automatically route to a specific page when a quick action is triggered in Expo Router?
 110. useQuickActionRouting from expo-quick-actions/router
+
+111. What is deep linking in the context of mobile apps?
+111. Deep linking allows opening a specific page in an app from outside the app by registering a custom scheme that the app listens to, enabling direct navigation to a particular screen using a URL-like identifier
+
+112. How does Expo Router support deep linking?
+112. Expo Router supports deep linking out of the box due to its file system based routing, which allows easily distinguishing screens with unique href paths and enabling navigation through custom app-specific schemes
+
+113. What determines the order of rendering in Expo Router when deep linking?
+113. Rendering occurs in a backward order, starting from the requested screen, then moving through parent layout files sequentially, which means redirects and other navigation logic in parent layouts will be processed first
+
+114. How can you set an initial route name in a stack navigation using Expo Router?
+114. By using unstable_settings with initialRouteName in the layout file, you can specify which route should be rendered first in a navigation stack, ensuring proper back button behavior and default screen rendering

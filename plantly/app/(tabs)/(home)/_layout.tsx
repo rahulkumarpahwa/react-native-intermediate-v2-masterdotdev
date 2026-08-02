@@ -5,6 +5,11 @@ import { Pressable } from "react-native";
 
 SplashScreen.hideAsync();
 
+// to go back to home page when we open a page using the deep link.
+export const unstable_settings = {
+  initialRouteName: "index",
+};
+
 export default function Layout() {
   return (
     <Stack>
@@ -35,7 +40,7 @@ export default function Layout() {
         name="plants/[plantId]"
         options={{
           title: "",
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
         }}
       ></Stack.Screen>
     </Stack>
