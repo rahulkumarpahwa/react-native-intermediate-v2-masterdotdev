@@ -288,3 +288,33 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 95. How can you prevent the splash screen from automatically hiding when an app launches?
 95. Use SplashScreen.preventAutoHide() to manually control when the splash screen disappears, which allows for performing async operations like authentication checks before showing the main app content.
+
+96. What are two ways to implement custom fonts in an Expo application?
+96. Load font at runtime using usefont hooks, which loads fonts asynchronously. 2. Use the expo-fontconfig plugin, which bundles font files in the native bundle.
+
+97. What font file type is recommended when using both OTF and TTF options?
+97. OTF (OpenType Font) is recommended because they tend to be smaller in file size.
+
+98. Why are plugins and mods important in Expo development?'
+98. Plugins and mods are JavaScript functions that run during pre-build, allowing changes to native project files and configurations without opting out of the pre-build process.
+
+99. What is the key difference in font family naming between Android and iOS platforms?
+99. On Android, the font family is based on the filename, while on iOS, it uses the postscript name of the font, which may differ from the filename.
+
+100. How can you handle different font naming conventions across platforms in React Native?
+100. Use Platform.select() to specify different font names for iOS and Android, ensuring consistent font rendering across platforms.
+
+101. What are two ways to implement custom fonts in an Expo application?
+101. Load font at runtime using usefont hooks, which loads fonts asynchronously. 2. Use the expo-fontconfig plugin, which bundles font files in the native bundle.
+
+102. What font file type is recommended when using both OTF and TTF options?
+102. OTF (OpenType Font) is recommended because they tend to be smaller in file size.
+
+103. Why are plugins and mods important in Expo development?
+103. Plugins and mods are JavaScript functions that run during pre-build, allowing changes to native project files and configurations without opting out of the pre-build process.
+
+104. What is the key difference in font family naming between Android and iOS platforms?
+104. On Android, the font family is based on the filename, while on iOS, it uses the postscript name of the font, which may differ from the filename.
+
+105. How can you handle different font naming conventions across platforms in React Native?
+105. Use Platform.select() to specify different font names for iOS and Android, ensuring consistent font rendering across platforms.

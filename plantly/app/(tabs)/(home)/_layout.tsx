@@ -1,7 +1,9 @@
 import { theme } from "@/theme";
 import { AntDesign } from "@expo/vector-icons";
-import { Link, Stack } from "expo-router";
+import { Link, SplashScreen, Stack } from "expo-router";
 import { Pressable } from "react-native";
+
+SplashScreen.hideAsync();
 
 export default function Layout() {
   return (

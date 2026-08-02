@@ -25,7 +25,22 @@
     "plugins": [
       "expo-router",
       "expo-status-bar",
-      "expo-font"
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/caveat/400Regular/Caveat_400Regular.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
     ],
     "extra": {
       "router": {},

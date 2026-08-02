@@ -1,5 +1,7 @@
-import { Stack } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import Toast from "react-native-toast-message";
+
+SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
   return (
