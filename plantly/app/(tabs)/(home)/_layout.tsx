@@ -5,7 +5,7 @@ import { Pressable } from "react-native";
 
 SplashScreen.hideAsync();
 
-// to go back to home page when we open a page using the deep link.
+// to go back to home page when we open a page using the deep link. To specify the default starting screen in a navigation stack when opened a particular page.
 export const unstable_settings = {
   initialRouteName: "index",
 };

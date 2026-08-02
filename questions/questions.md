@@ -345,3 +345,18 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 114. How can you set an initial route name in a stack navigation using Expo Router?
 114. By using unstable_settings with initialRouteName in the layout file, you can specify which route should be rendered first in a navigation stack, ensuring proper back button behavior and default screen rendering
+
+115. How can you pass URL parameters in a mobile app for deep linking?
+115. Use URL schemes with parameters like plantly://plant/1?action=water, ensuring the question mark is escaped when used in the terminal. The useLocalSearchParams hook can be used to retrieve these parameters.
+
+116. What method can be used to retrieve URL parameters in a React Native mobile app?
+116. The useLocalSearchParams hook can be used to retrieve URL parameters, which returns an object containing the parameters passed in the deep link URL.
+
+117. How does deep linking differ between iOS and Android platforms?
+117. On iOS, deep linking is simpler and can be tested directly in Safari by typing the URL scheme. On Android, deep linking often requires clicking a link, typically using an HTML anchor tag, and works best on a real device.
+
+118. What is a practical use case for deep linking in a mobile application?
+118. A practical use case is creating a link that automatically triggers a specific action when opened, such as sending an email reminder to water a plant and having the app directly open to the watering action for a specific plant.
+
+119. What is the recommended approach for more secure and integrated deep linking?
+119. Use universal and app links, which integrate deep linking with a website by registering a domain as an associated domain in the app and adding specific files to the website to enable more sophisticated linking.

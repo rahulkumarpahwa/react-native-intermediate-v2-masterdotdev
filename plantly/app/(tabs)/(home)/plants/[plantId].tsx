@@ -21,7 +21,7 @@ export default function PlantDetails() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    // url we get when call the app's page with deep link and pass the query params in that
+    // url we get when call the app's page with deep link and pass the query params in that and we are here creating watering the plant.
     if (params.action === "water") {
       if (typeof plantId === "string") {
         waterPlant(plantId);
