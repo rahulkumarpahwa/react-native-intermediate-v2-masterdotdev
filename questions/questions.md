@@ -390,3 +390,18 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 129. What are three ways to deploy an app to the App Store?
 129. Deploy via Xcode, use the Apple Transporter app, or use EAS Submit
+
+130. What are the two key components that must be declared when submitting an app to app stores regarding data collection?
+130. A privacy policy URL and a detailed declaration of what specific user data is being collected (such as name, fitness data, or financial information)
+
+131. What are the minimum promotional assets required for Android app submission?
+131. An app icon, a feature graphic, and between four to ten screenshots, with strict sizing requirements
+
+132. What are the three testing tracks available for Android app distribution?
+132. Internal testing (up to 100 invited users), closed testing (larger email list with mini-review), and open testing (app available on Play Store tagged as beta)
+
+133. What unique requirement exists for personal Android developer accounts before production release?
+133. A minimum of 20 testers must have opted in to test the app for at least 14 days before applying for production access
+
+134. How do iOS and Android app reviews differ in their review process?
+134. iOS reviews tend to be more strict, with manual and automated checks, and may require login credentials for testing locked features. Reviewers can reject apps for various reasons, including discrepancies between bundled code and app functionality

@@ -39,7 +39,7 @@
           "image": "./assets/icon.png",
           "imageSize" : "200",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#fff"
         }
       ],
       [
