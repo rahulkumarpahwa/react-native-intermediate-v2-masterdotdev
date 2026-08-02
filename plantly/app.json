@@ -37,8 +37,20 @@
         "expo-splash-screen",
         {
           "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-quick-actions",
+        {
+          "androidIcons": {
+            "leaf": {
+              "foregroundImage": "./assets/leaf.png",
+              "backgroundColor": "#ffffff"
+            }
+          }
         }
       ]
     ],

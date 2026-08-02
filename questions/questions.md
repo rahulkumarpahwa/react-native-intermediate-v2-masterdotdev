@@ -318,3 +318,18 @@ NOTE : As of Feb 17, 2026, it's not possible to use a full-screen splash image o
 
 105. How can you handle different font naming conventions across platforms in React Native?
 105. Use Platform.select() to specify different font names for iOS and Android, ensuring consistent font rendering across platforms.
+
+106. What command is used to install expo-quick-actions?
+106. npx expo install expo-quick-actions
+
+107. What is the difference between quick action icons on iOS and Android?
+107. On iOS, quick action icons use SF Symbols, while on Android, you need to pass in a bundled image
+
+108. What command is used to rebuild native projects after modifying app.json?
+108. npx expo prebuild clean
+
+109. How many quick action items are recommended to add to an app?
+109. One or two quick action items, with recommendations not to exceed three or four
+
+110. What hook is used to automatically route to a specific page when a quick action is triggered in Expo Router?
+110. useQuickActionRouting from expo-quick-actions/router
